@@ -1,7 +1,19 @@
 .box {
-    background-color: white
+    background-color:white;
     padding-top: 45px;
     padding: 35px;
+}
+body {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+
+h2{ 
+
 }
 
 
