@@ -6,3 +6,4 @@ Press the generate button to create your password and gain a new ounce of securi
 #### Credientals 
  https://dev.to/code_mystery/random-password-generator-using-javascript-6a
  
+ helped me a lot in the beginning on setting up a good foundation to work from 
