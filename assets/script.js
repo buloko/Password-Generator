@@ -1,3 +1,11 @@
+//variables for the characthers
+var upperCase = "ABCDEFHJKLMNIOPQRUSTUVWXYZ";
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var anyNum = "0123456789";
+var anySpecial = "!@#$%^&*()";
+
+
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -11,7 +19,7 @@ function writePassword() {
 
 // Add event listener to generate button
 function generatePassword() {
-  var chars = "01234567890abcdefghijklmnopqrustuvwxyz!#$%^&*()ABCDE";
+  // var chars = "01234567890abcdefghijklmnopqrustuvwxyz!#$%^&*()ABCDE";
   var passwordLength = 10;
   var password = "";
   for (var i = 0; i <= passwordLength; i++) {
