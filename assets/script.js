@@ -11,7 +11,7 @@ function generatePassword() {
   var pasArray = "";
 
 var numChar = window.prompt("How many characthers do you want to have?");
-if(numChar === null) {
+if (numChar === null) {
   return;
 }
 
