@@ -7,26 +7,25 @@ var anySpecial = "!@#$%^&*(),.;:_-=+{}|/`";
 // Code must be between 8-128 words
 
 function generatePassword() {
-  var wordArray= ""
-  var password = ""
-   
-  var wordLength = prompt("Choose a length for your password")
+  var wordArray = "";
+  var password = "";
+
+  var wordLength = prompt("Choose a length for your password");
   if (wordLength === null) {
     return;
   }
-  if (wordLemgth < 8 ) {
-    alert("Password must be bigger than 8 letters")
-}
-if (isNaN(wordLength)) {
-  alert("You must answer with a number")
-}
-if (wordLength > 128) {
-  alert("Password must be less than 128 letters")
-}
+  if (wordLemgth < 8) {
+    alert("Password must be bigger than 8 letters");
   }
-  
-console.log(wordLength);
+  if (isNaN(wordLength)) {
+    alert("You must answer with a number");
+  }
+  if (wordLength > 128) {
+    alert("Password must be less than 128 letters");
+  }
+}
 
+console.log(wordLength);
 
 console.log(anyLower);
 console.log(anyUpper);
@@ -39,7 +38,7 @@ var specialChars = confirm("Use Special Characthers?");
 var numbers = confirm("Use numbers?");
 
 var veryRandom = {
-  lowerCase : anyLower,
+  lowerCase: anyLower,
   upperCase: anyUpper,
   specialChars: anySpecial,
   numbers: anyNum,
@@ -55,7 +54,7 @@ console.log(
   "Lower-Case",
   lowerCase,
   "Upper-Case",
-  upperCase,
+  upperCase
 );
 
 if (specChars) {
@@ -77,22 +76,20 @@ if (upperCase) {
   wordArray = wordArray.concat(anyUpper);
   console.log(wordArray);
 }
- if (!specChar && !number && !lowerCase && !upperCase) {
+if (!specChar && !number && !lowerCase && !upperCase) {
   alert("You must chose at least one chracther type");
   generatePassword();
- }
+}
 
- console.log("word-Array", wordArray);
+console.log("word-Array", wordArray);
 
- for (var i = 0; i < wordLength; i++ ) {
+for (var i = 0; i < wordLength; i++) {
   var rando = Math.floor(Math.random() * wordArray.length);
   password += wordArray.substring(rando, rando + 1);
+}
+return password;
 
- }
- return password;
-
-
- var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -100,7 +97,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
