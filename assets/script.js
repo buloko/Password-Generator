@@ -1,4 +1,3 @@
-//variables for the characthers
 var anyUpper = "ABCDEFHJKLMNIOPQRUSTUVWXYZ";
 var anyLower = "abcdefghijklmnopqrstuvwxyz";
 var anyNum = "0123456789";
@@ -45,3 +44,64 @@ var veryRandom = {
   specialChars: anySpecial,
   numbers: anyNum,
 };
+
+console.log(
+  "Length",
+  wordLength,
+  "Symbols",
+  specChars,
+  "Numbers",
+  number,
+  "Lower-Case",
+  lowerCase,
+  "Upper-Case",
+  upperCase,
+);
+
+if (specChars) {
+  wordArray = wordArray.concat(anySpecial);
+  console.log(wordArray);
+}
+
+if (number) {
+  wordArray = wordArray.concat(anyNum);
+  console.log(wordArray);
+}
+
+if (lowerCase) {
+  wordArray = wordArray.concat(anyLower);
+  console.log(wordArray);
+}
+
+if (upperCase) {
+  wordArray = wordArray.concat(anyUpper);
+  console.log(wordArray);
+}
+ if (!specChar && !number && !lowerCase && !upperCase) {
+  alert("You must chose at least one chracther type");
+  generatePassword();
+ }
+
+ console.log("word-Array", wordArray);
+
+ for (var i = 0; i < wordLength; i++ ) {
+  var rando = Math.floor(Math.random() * wordArray.length);
+  password += wordArray.substring(rando, rando + 1);
+
+ }
+ return password;
+
+
+ var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
