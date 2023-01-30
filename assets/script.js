@@ -1,8 +1,8 @@
 //variables for the characthers
-var upperCase = "ABCDEFHJKLMNIOPQRUSTUVWXYZ";
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var anyUpper = "ABCDEFHJKLMNIOPQRUSTUVWXYZ";
+var anyLower = "abcdefghijklmnopqrstuvwxyz";
 var anyNum = "0123456789";
-var specialChars = "!@#$%^&*(),.;:_-=+{}|/`";
+var anySpecial = "!@#$%^&*(),.;:_-=+{}|/`";
 
 //Prompt asks what you want to include in the password
 // Code must be between 8-128 words
@@ -27,3 +27,21 @@ if (wordLength > 128) {
   }
   
 console.log(wordLength);
+
+
+console.log(anyLower);
+console.log(anyUpper);
+console.log(anySpecial);
+console.log(anyNum);
+
+var lowerCase = confirm("Use Lower-Case letters?");
+var upperCase = confirm("Use Upper Case?");
+var specialChars = confirm("Use Special Characthers?");
+var numbers = confirm("Use numbers?");
+
+var veryRandom = {
+  lowerCase : anyLower,
+  upperCase: anyUpper,
+  specialChars: anySpecial,
+  numbers: anyNum,
+};
