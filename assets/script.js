@@ -28,25 +28,25 @@ function generatePassword() {
   }
 
   console.log(wordLength);
-
+//logs in what you select
   console.log(anyLower);
   console.log(anyLower);
   console.log(anyUpper);
   console.log(anySpecial);
   console.log(anyNum);
-
+//console logs of the prompts
   var lowerCase = confirm("Use Lower-Case letters?");
   var upperCase = confirm("Use Upper Case?");
   var specChar = confirm("Use Symbols?");
   var number = confirm("Use Numbers?");
-
+//properties
   var veryRandom = {
     lowerCase: anyLower,
     upperCase: anyUpper,
     number: anyNum,
     specChar: anySpecial,
   };
-
+//logs in whatever properties you select
   console.log(
     "Length",
     wordLength,
@@ -59,7 +59,7 @@ function generatePassword() {
     "Upper-Case",
     upperCase
   );
-
+//combines the properties you select to make your password
   if (specChar) {
     wordArray = wordArray.concat(anySpecial);
     console.log(wordArray);
@@ -92,7 +92,7 @@ function generatePassword() {
   }
   return password;
 }
-
+//starter code to generate password
 var generatebtn = document.querySelector("#generate");
 
 // Write password to the #password input
